@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --btn-font-color: rgb(0, 0, 0);
+    --btn-bg-color: rgb(204, 4, 211);
+    --input-icon-color: rgb(218, 7, 207);
+    --input-font-color: rgb(0, 0, 0);
+    --input-p-h-color: rgb(3, 3, 3);
+    --title-color: rgb(0, 0, 0);
+    --bg-color: #fff;
+    --error-input-color: red;
+    --link-to-color: rgb(0, 0, 0);
+    --link-to-hover-color: rgb(255, 62, 3);
+}
+
+.app{
+   background-color: rgb(220, 220, 220);
+}
+
+.error{
+   width: 100%;
+   position: relative;
+}
+
+.error-input{
+   font-size: 13px;
+   letter-spacing: 1px;
+   margin-top: 8px;
+   font-weight: 500;
+   text-align: left;
+   position: absolute;
+   top: 7px;
+   left: 7px;
+   color: var(--error-input-color);
+}
