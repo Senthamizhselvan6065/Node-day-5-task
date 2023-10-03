@@ -5,7 +5,7 @@ import Signin from './Components/Register';
 import Login from './Components/Login';
 import ForgotPassword from './Components/ForgotPassword';
 import ResetPassword from './Components/ResetPassword';
-export let url = "http://localhost:7000/api/user"
+export let url = "https://reset-password-wfbh.onrender.com/api/user"
 
 const App = () => {
   const router = createBrowserRouter([
