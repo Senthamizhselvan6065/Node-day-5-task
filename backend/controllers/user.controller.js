@@ -101,8 +101,14 @@ userRouter.post("/forgot/password", expressAsyncHandler( async (req, res, next) 
     const user = await User.findOne({email});
     const resetToken = await getResetToken(user)
     await user.save();
+
+    let BASE_URL = process.env.FRONTEND_URL;
+    if(process.env.NODE_ENV === "production"){
+        BASE_URL = `${req.protocol}://${req.get("host")}`
+    }
+
     /* create reset url */
-    const resetUrl = `<a href=${process.env.FRONTEND_URL}/reset/password/${resetToken}> Rest your password </a>`;
+    const resetUrl = `<a href=${BASE_URL}/reset/password/${resetToken}> Rest your password </a>`;
      /* email send nessage */
     const message = `Your password reset url is as follows\n\n ${resetUrl}\n\n if you have not requested this email, then ignore it`;
     /* send email */
