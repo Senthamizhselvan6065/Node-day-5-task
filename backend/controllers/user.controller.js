@@ -103,7 +103,7 @@ userRouter.post("/forgot/password", expressAsyncHandler( async (req, res, next) 
     await user.save();
 
     let BASE_URL = process.env.FRONTEND_URL;
-    if(process.env.NODE_ENV === "production"){
+    if(process.env.NODE_ENV === "development"){
         BASE_URL = `${req.protocol}://${req.get("host")}`
     }
 
